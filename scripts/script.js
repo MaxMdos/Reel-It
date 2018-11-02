@@ -5,7 +5,9 @@ $("#search").on("click", function(e){
     $.ajax({
         type:"GET",
         url:`${API}`,
-        data: {t : finder.value},
+        data: {
+            t : finder.value
+        },
         dataType:"json",
         success: function(res){
             $("#pic").attr("src", res.Poster);
