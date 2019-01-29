@@ -12,16 +12,16 @@ button.onclick = () => {
     // returns the actual json thingy...
     .then(response => {
         console.log(response)
-        apTitle(response)
+        renderInfo(response)
     })
     .catch(error => console.log(error))
 }
 
-function apTitle(movie){
+function renderInfo(movie){
    result.innerHTML = `
    <img src='${movie.Poster}'>
    <h1>${movie.Title}</h1>
-   <p>${movie.Director}</p>
-   <p>${movie.Released}</p>
+   <p>Director: ${movie.Director}</p>
+   <p>Release Date: ${movie.Released}</p>
    `
 }
